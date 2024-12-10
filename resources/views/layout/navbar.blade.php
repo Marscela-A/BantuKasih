@@ -12,25 +12,28 @@
     </a>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item mx-3">
-          <a class="nav-link active" aria-current="page" href="#">Donasi</a>
-        </li>
-        <li class="nav-item mx-3">
-          <a class="nav-link active" aria-current="page" href="#">Donor</a>
-        </li>
-        <li class="nav-item mx-3">
-          <a class="nav-link active" aria-current="page" href="#">Kegiatan Sosial</a>
-        </li>
-        <li class="nav-item mx-3">
-          <a class="nav-link active" aria-current="page" href="#">Tentang Kami</a>
-        </li>
-      </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-3">
+                <a class="nav-link active" aria-current="page" href="#">Donasi</a>
+            </li>
+            <li class="nav-item mx-3">
+                <a class="nav-link active" aria-current="page" href="#">Donor</a>
+            </li>
+            <li class="nav-item mx-3">
+                <a class="nav-link active" aria-current="page" href="#">Tentang Kami</a>
+            </li>
+        </ul>
 
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+        <form class="d-flex mx-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+
+
+        <a class="nav-link" href="">
+            <img src="{{ asset('img/profile.png') }}" alt="Profile" class="profile-logo me-2" style="height: 35px;">
+        </a>
+
     </div>
 
   </div>
