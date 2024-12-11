@@ -1,8 +1,8 @@
 @extends('layout.master')
-@section('title', 'Halaman Utama')
+@section('title', 'Donor Organ')
 
 @section('konten')
 <div class="container mt-4">
-    <h4>home page</h4>
+    <h4>Donor Organ</h4>
 </div>
 @endsection
