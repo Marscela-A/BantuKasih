@@ -13,12 +13,28 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item mx-3">
-                <a class="nav-link active" aria-current="page" href="#">Donasi</a>
+
+            <li class="nav-item dropdown mx-3">
+                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"  aria-expanded="false">
+                    Donasi
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Disabilitas</a></li>
+                    <li><a class="dropdown-item" href="#">Bencana Alam</a></li>
+                    <li><a class="dropdown-item" href="#">Panti Asuhan</a></li>
+                </ul>
             </li>
-            <li class="nav-item mx-3">
-                <a class="nav-link active" aria-current="page" href="#">Donor</a>
+
+            <li class="nav-item dropdown mx-3">
+                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"  aria-expanded="false">
+                    Donor
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Darah</a></li>
+                    <li><a class="dropdown-item" href="#">Organ</a></li>
+                </ul>
             </li>
+
             <li class="nav-item mx-3">
                 <a class="nav-link active" aria-current="page" href="#">Tentang Kami</a>
             </li>
