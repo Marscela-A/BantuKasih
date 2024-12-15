@@ -9,9 +9,8 @@ use App\Http\Controllers\AkunController;
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::prefix('/donasi')->group(function(){
-Route::get('/disabilitas', [DonasiController::class, 'di'])->name('donasi.disabilitas');
-Route::get('/bencanaAlam', [DonasiController::class, 'ba'])->name('donasi.bencanaAlam');
-Route::get('/pantiAsuhan', [DonasiController::class, 'pa'])->name('donasi.pantiAsuhan');
+Route::get('/donasi/{kategori}', [DonasiController::class, 'kategori'])->name('donasi.kategori');
+Route::get('/donasi/detail/{id}', [DonasiController::class, 'show'])->name('donasi.show');
 });
 Route::prefix('/donor')->group(function(){
 Route::get('/darah', [DonorController::class, 'da'])->name('donor.darah');

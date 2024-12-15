@@ -19,9 +19,9 @@
                     Donasi
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Disabilitas</a></li>
-                    <li><a class="dropdown-item" href="#">Bencana Alam</a></li>
-                    <li><a class="dropdown-item" href="#">Panti Asuhan</a></li>
+                    <li><a class="dropdown-item" href="{{ route('donasi.kategori', 'disabilitas') }}">Disabilitas</a></li>
+                    <li><a class="dropdown-item" href="{{ route('donasi.kategori', 'bencana alam') }}">Bencana Alam</a></li>
+                    <li><a class="dropdown-item" href="{{ route('donasi.kategori', 'panti asuhan') }}">Panti Asuhan</a></li>
                 </ul>
             </li>
 
