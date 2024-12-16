@@ -7,7 +7,7 @@
 <nav class="navbar navbar-expand-lg fixed-top bg-white navbar-border py-3">
   <div class="container-fluid px-5">
     
-    <a class="navbar-brand">
+    <a class="navbar-brand" href="{{ route('home') }}">
         <img src="{{ asset('img/logo.png') }}" alt="Logo" style="height: 25px;">
     </a>
 
@@ -30,13 +30,13 @@
                     Donor
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Darah</a></li>
-                    <li><a class="dropdown-item" href="#">Organ</a></li>
+                    <li><a class="dropdown-item" href="{{ route('donor.kategori', 'darah') }}">Darah</a></li>
+                    <li><a class="dropdown-item" href="{{ route('donor.kategori', 'organ') }}">Organ</a></li>
                 </ul>
             </li>
 
             <li class="nav-item mx-3">
-                <a class="nav-link active" aria-current="page" href="#">Tentang Kami</a>
+                <a class="nav-link active" aria-current="page" href="{{route('aboutus')}}">Tentang Kami</a>
             </li>
         </ul>
 

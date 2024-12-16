@@ -11,7 +11,6 @@
         }
         body {
             background-color: white;
-            padding-bottom: 50px;
             padding-top: 80px;
         }
     </style>
