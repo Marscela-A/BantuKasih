@@ -24,5 +24,33 @@
         </div>
         @endforeach
     </div>
+
+    <style>
+        .pagination {
+            justify-content: center;
+        }
+        .pagination .page-link {
+            color: #AF0000;
+        }
+        .pagination .page-link:hover {
+            color: white;
+            background-color: #AF0000;
+        }
+        .pagination .page-item.active .page-link {
+            color: white;
+            background-color: #AF0000;
+            border-color: #AF0000;
+        }
+    </style>
+
+
+    <div class="d-flex justify-content-center mt-4">
+        <nav>
+            <ul class="pagination pagination-sm">
+                {{ $donasi->links('pagination::bootstrap-5') }}
+            </ul>
+        </nav>
+    </div>
+
 </div>
 @endsection
