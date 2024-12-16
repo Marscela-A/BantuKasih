@@ -14,6 +14,7 @@
             padding-top: 80px;
             display: flex;
             flex-direction: column;
+            width: 100%
         }
         html, body {
             height: 100%;
