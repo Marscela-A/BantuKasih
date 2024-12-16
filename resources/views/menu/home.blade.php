@@ -2,7 +2,7 @@
 @section('title', 'Halaman Utama')
 
 @section('konten')
-<div class="row">
+<div>
     <div class="col-12">
         <img src="{{asset('img/banner.jpg')}}" alt="Banner" style= "width:100%;height:80vh;padding-bottom:20px">
         <div class="container mt-4">
@@ -17,7 +17,7 @@
                         <p class="card-text">Disabilitas adalah fitur yang berisi daftar penyandang disabilitas yang memudahkan kita dalam berdonasi kepada penyandang disabilitas disekitar kita</p>
                         </div>
                         <div class="card-footer">
-                            <a href="{{ route('donasi.kategori', 'disabilitas') }}" class="btn btn-danger">Baca Lebih Lanjut</a>
+                            <a href="{{ route('donasi.kategori', 'disabilitas') }}" class="btn btn-danger" style="background-color: #AF0000;">Baca Lebih Lanjut</a>
                         </div>
                     </div>
                     <div class="card">
@@ -27,7 +27,7 @@
                         <p class="card-text">Bencana alam adalah fitur yang berisi daftar bencana alam yang terjadi di sekitar kita dan layanan donasi kepada korbannya</p>
                         </div>
                         <div class="card-footer">
-                            <a href="{{ route('donasi.kategori', 'bencana alam') }}" class="btn btn-danger">Baca Lebih Lanjut</a>
+                            <a href="{{ route('donasi.kategori', 'bencana alam') }}" class="btn btn-danger" style="background-color: #AF0000;">Baca Lebih Lanjut</a>
                         </div>
                     </div>
                     <div class="card">
@@ -37,7 +37,7 @@
                         <p class="card-text">Panti Asuhan adalah fitur yang berisi daftar panti asuhan di sekitar kita dengan tujuan memberikan kehidupan yang lebih layak kepada anak-anak yatim piatu</p>
                         </div>
                         <div class="card-footer">
-                            <a href="{{ route('donasi.kategori', 'panti asuhan') }}" class="btn btn-danger">Baca Lebih Lanjut</a>
+                            <a href="{{ route('donasi.kategori', 'panti asuhan') }}" class="btn btn-danger" style="background-color: #AF0000;">Baca Lebih Lanjut</a>
                         </div>
                     </div>
             </div>
@@ -52,7 +52,7 @@
                         <p class="card-text">Donor darah adalah fitur yang berisi daftar rumah sakit yang membutuhkan donor darah dengan data golongan darah yang dibutuhkan, sehingga memudahkan kita dalam aksi menolong pasien yang kekurangan darah</p>
                         </div>
                         <div class="card-footer">
-                            <a href="{{ route('donor.kategori', 'darah') }}" class="btn btn-danger">Baca Lebih Lanjut</a>
+                            <a href="{{ route('donor.kategori', 'darah') }}" class="btn btn-danger" style="background-color: #AF0000;">Baca Lebih Lanjut</a>
                         </div>
                     </div>
                     <div class="card">
@@ -62,7 +62,7 @@
                         <p class="card-text">Donor organ adalah fitur yang berisi daftar rumah sakit yang membutuhkan donor organ untuk pasien yang operasi dengan data organ yang diperlukan, sehingga memudahkan dalam mendonorkan organ secara resmi dan bermanfaat pada orang lain</p>
                         </div>
                         <div class="card-footer">
-                            <a href="{{ route('donor.kategori', 'organ') }}" class="btn btn-danger">Baca Lebih Lanjut</a>
+                            <a href="{{ route('donor.kategori', 'organ') }}" class="btn btn-danger" style="background-color: #AF0000;">Baca Lebih Lanjut</a>
                         </div>
                     </div>
                 <div>
@@ -73,7 +73,7 @@
                 <h1>Tentang Kami</h1>
                 <img src="img/banner.jpg" alt="banner" style="width:70%; height:300px">
                 <p>Bantu Kasih adalah sebuah platfowm website yang bertujuan untuk meningkatkan kualitas masyarakat terutama di Indonesia dengan membantu sesama masyarakat yang sedang...</p>
-                <a href="{{ route('aboutus') }}" class="btn btn-danger">Baca Lebih Lanjut</a>
+                <a href="{{ route('aboutus') }}" class="btn btn-danger" style="background-color: #AF0000;">Baca Lebih Lanjut</a>
             </div>
         </div>
     </div>
