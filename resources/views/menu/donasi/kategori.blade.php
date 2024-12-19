@@ -10,7 +10,7 @@
             <div class="card mb-3" >
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="{{ asset($item->foto) }}" class="img-fluid rounded-start" alt="{{ $item->judul }}">
+                        <img src="{{ asset('img/'.$item->foto) }}" class="img-fluid rounded-start" alt="{{ $item->judul }}" style="height:250px;width:500px">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">

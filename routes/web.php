@@ -3,8 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\DonasiController;
-use App\Http\Controllers\DonorController;
 use App\Http\Controllers\AkunController;
+use App\Http\Controllers\FormController;
 
 Route::get('/home', function(){
     return view('menu.home');
@@ -13,10 +13,7 @@ Route::prefix('/donasi')->group(function(){
     Route::get('/{kategori}', [DonasiController::class, 'kategori'])->name('donasi.kategori');
     Route::get('/detail/{id}', [DonasiController::class, 'show'])->name('donasi.show');
 });
-Route::prefix('/donor')->group(function(){
-    Route::get('/{kategori}', [DonorController::class, 'kategori'])->name('donor.kategori');
-    Route::get('/detail/{id}', [DonorController::class, 'show'])->name('donor.show');
-});
+Route::get('/form/{id}', [FormController::class, 'showForm'])->name('donasi.form');
 Route::resource('/akun', AkunController::class);
 
 Route::get('/aboutus', function (){

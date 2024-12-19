@@ -14,27 +14,15 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
-            <li class="nav-item dropdown mx-3">
-                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"  aria-expanded="false">
-                    Donasi
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="{{ route('donasi.kategori', 'disabilitas') }}">Disabilitas</a></li>
-                    <li><a class="dropdown-item" href="{{ route('donasi.kategori', 'bencana alam') }}">Bencana Alam</a></li>
-                    <li><a class="dropdown-item" href="{{ route('donasi.kategori', 'panti asuhan') }}">Panti Asuhan</a></li>
-                </ul>
+            <li class="nav-item mx-3">
+                <a class="nav-link active" aria-current="page" href="{{route('donasi.kategori', 'disabilitas')}}">Disabilitas</a>
             </li>
-
-            <li class="nav-item dropdown mx-3">
-                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"  aria-expanded="false">
-                    Donor
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="{{ route('donor.kategori', 'darah') }}">Darah</a></li>
-                    <li><a class="dropdown-item" href="{{ route('donor.kategori', 'organ') }}">Organ</a></li>
-                </ul>
+            <li class="nav-item mx-3">
+                <a class="nav-link active" aria-current="page" href="{{route('donasi.kategori', 'bencana alam')}}">Bencana Alam</a>
             </li>
-
+            <li class="nav-item mx-3">
+                <a class="nav-link active" aria-current="page" href="{{route('donasi.kategori', 'panti asuhan')}}">Panti Asuhan</a>
+            </li>
             <li class="nav-item mx-3">
                 <a class="nav-link active" aria-current="page" href="{{route('aboutus')}}">Tentang Kami</a>
             </li>

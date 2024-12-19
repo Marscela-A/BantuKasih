@@ -41,32 +41,6 @@
                         </div>
                     </div>
             </div>
-            <div style="padding-top:20px">
-                <h1>Donor</h1>
-                <p>Saat sakit kita membutuhkan bantuan, baik dari keluarga, teman, maupun lingkungan sekitar. Terutama pada penyakit yang sulit disembuhkan maupun membutuhkan pertolongan langsung dari orang lain. Oleh karena itu, disediakan fitur donor ini yang akan membantu masyarakat yang membutuhkan bantuan donor agar dapat sembuh dan beraktivitas seperti manusia sehat lainnya. Fitur donor yang disediakan adalah fitur donor darah dan donor organ</p>
-                <div class="card-group">
-                    <div class="card">
-                        <img src="{{asset('img/donor.jpg')}}" class="card-img-top" alt="Donor Darah" style="width: auto; height: 250px;">
-                        <div class="card-body">
-                        <h5 class="card-title">Donor Darah</h5>
-                        <p class="card-text">Donor darah adalah fitur yang berisi daftar rumah sakit yang membutuhkan donor darah dengan data golongan darah yang dibutuhkan, sehingga memudahkan kita dalam aksi menolong pasien yang kekurangan darah</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="{{ route('donor.kategori', 'darah') }}" class="btn btn-danger" style="background-color: #AF0000;">Baca Lebih Lanjut</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="{{asset('img/organ.jpg')}}" class="card-img-top" alt="Donor Organ" style="width: auto; height: 250px;">
-                        <div class="card-body">
-                        <h5 class="card-title">Donor Organ</h5>
-                        <p class="card-text">Donor organ adalah fitur yang berisi daftar rumah sakit yang membutuhkan donor organ untuk pasien yang operasi dengan data organ yang diperlukan, sehingga memudahkan dalam mendonorkan organ secara resmi dan bermanfaat pada orang lain</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="{{ route('donor.kategori', 'organ') }}" class="btn btn-danger" style="background-color: #AF0000;">Baca Lebih Lanjut</a>
-                        </div>
-                    </div>
-                <div>
-            </div>
         </div>
         <div class="container mt-4" style="padding-bottom:40px;">
             <div style="text-align:center">
