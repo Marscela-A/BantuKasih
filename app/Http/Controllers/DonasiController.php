@@ -10,7 +10,7 @@ class DonasiController extends Controller
 
     public function kategori($kategori)
     {
-        $donasi = Donasi::where('kategori', $kategori)->paginate(5);
+        $donasi = Donasi::where('kategori', $kategori)->orderBy('created_at', 'desc')->paginate(5);
         return view('menu.donasi.kategori', compact('donasi', 'kategori'));
     }
 

@@ -5,10 +5,11 @@
 <div>
     <div class="col-12">
         <img src="{{asset('img/banner.jpg')}}" alt="Banner" style= "width:100%;height:80vh;padding-bottom:20px">
+        <h1 style="text-align:center">Mari Berbagi Hari Ini</h1>
+        <h3 style="text-align:center">Setiap Langkah Kecil Membawa Perubahan</h3>
         <div class="container mt-4">
             <div>
-                <h1>Donasi</h1>
-                <p>Di sekitar kita, ada banyak orang yang membutuhkan bantuan agar dapat hidup layak seperti masyarakat biasa. Oleh karena itu, disediakan fitur Donasi agar dapat membantu sesama saudara kita yang kesulitan agar dapat hidup lebih baik dan layak. Beberapa kategori dari fitur Donasi diantaranya adalah penyandang disabilitas, korban bencana alam, dan panti asuhan</p>
+                <p>Di sekitar kita, ada banyak orang yang membutuhkan bantuan agar dapat hidup layak seperti masyarakat biasa. Oleh karena itu, disediakan mari kita berdonasi agar dapat membantu sesama saudara kita yang kesulitan agar dapat hidup lebih baik dan layak. Beberapa kategori dari fitur Donasi diantaranya adalah penyandang disabilitas, korban bencana alam, dan panti asuhan</p>
                 <div class="card-group">
                     <div class="card">
                         <img src="{{asset('img/disabilitas.jpg')}}" class="card-img-top" alt="Disabilitas" style="width: auto; height: 250px;">
