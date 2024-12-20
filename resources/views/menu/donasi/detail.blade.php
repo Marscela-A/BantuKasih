@@ -11,7 +11,7 @@
             <h1>{{ $donasi->judul }}</h1>
             <p><strong>Kategori:</strong> {{ ucfirst($donasi->kategori) }}</p>
             <p><strong>Deskripsi:</strong> {{ $donasi->deskripsi }}</p>
-            <p>Untuk membantu teman-teman kita yang sedang kesulitan bencana ini, mari kita berdonasi</p>
+            <p>Untuk membantu teman-teman kita yang sedang kesulitan ini, mari kita berdonasi</p>
             <a href="#" class="btn" style="background-color: #AF0000; color: white;">Donasi Sekarang</a>
         </div>
     </div>
