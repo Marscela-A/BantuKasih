@@ -1,9 +1,9 @@
-@extends('layouts.master')
+@extends('layout.master')
 @section('title', 'Form')
 
 @section('konten')
 <h1>Form Donasi</h1>
-<form action="{{ route('donasi.form', '{$donasiId}') }}" method="POST">
+<form action="{{ route('donasi.form', $donasiId) }}" method="POST">
     @csrf
     <input type="hidden" name="article_id" value="{{ $donasiId }}">
     <label for="amount">Jumlah Donasi:</label>
