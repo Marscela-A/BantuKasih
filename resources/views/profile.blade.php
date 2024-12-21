@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container" style="padding-top:70px">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header" style="background-color:#AF0000;color:white; text-align:center">{{ __('Dashboard') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -16,7 +16,7 @@
                     <div class="card-group">
                         <div class="card">
                             <div class="card-body">
-                                <img src="img/banner.jpg" class="img-thumbnail" alt="Profile" width="250" height="250" >
+                                <img src="img/profile.png" class="img-thumbnail" alt="Profile" width="250" height="250">
                             </div>
                         </div>
                         <div class="card">

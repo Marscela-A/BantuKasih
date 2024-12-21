@@ -14,7 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except('logout');
     }
 
     /**
@@ -25,6 +25,13 @@ class HomeController extends Controller
     public function index()
     {
         $profile = Auth::user();
-        return view('login', compact('profile'));
+        return view('profile', compact('profile'));
+    }
+    public function logout(Request $request){
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect()->route('home')->with('success', 'Anda telah berhasil logout.');
     }
 }

@@ -15,39 +15,52 @@
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <style>
+    .navbar-border{
+        border-bottom: 3px solid #AF0000;
+    }
+</style>
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'BantuKasih') }}
+        <nav class="navbar navbar-expand-lg fixed-top bg-white navbar-border py-3">
+            <div class="container-fluid px-5">
+                <a class="navbar-brand" href="{{ route('home') }}">
+                    <img src="{{ asset('img/logo.png') }}" alt="Logo" style="height: 25px;">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link active" aria-current="page" href="{{ route('donasi.kategori', 'disabilitas') }}">Disabilitas</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link active" aria-current="page" href="{{ route('donasi.kategori', 'bencana alam') }}">Bencana Alam</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link active" aria-current="page" href="{{ route('donasi.kategori', 'panti asuhan') }}">Panti Asuhan</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link active" aria-current="page" href="{{ route('aboutus') }}">Tentang Kami</a>
+                    </li>
+                </ul>
+                <form class="d-flex mx-3" role="search" action="{{route('search')}}" method="GET">
+                    <input class="form-control me-2" type="search" name="search"placeholder="Search" aria-label="Search" required>
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <ul class="navbar-nav ms-auto">
+                    @guest
+                        @if (Route::has('login'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('profile') }}">{{ __('Masuk') }}</a>
+                            </li>
+                        @endif
 
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('akun') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
+                        @if (Route::has('register'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Daftar') }}</a>
+                            </li>
+                        @endif
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -66,9 +79,8 @@
                                     </form>
                                 </div>
                             </li>
-                        @endguest
-                    </ul>
-                </div>
+                    @endguest
+                </ul>
             </div>
         </nav>
 
