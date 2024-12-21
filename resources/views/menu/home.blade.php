@@ -6,6 +6,12 @@
     <div class="col-12">
         <img src="{{asset('img/banner.jpg')}}" alt="Banner" style= "width:100%;height:80vh;padding-bottom:20px">
         <h1 style="text-align:center">Mari Berbagi Hari Ini</h1>
+        @if (session('success'))
+            <div class="alert alert-danger" role="alert">
+                {{ session('success') }}
+            </div>
+            {{ __('Dashboard') }}
+        @endif
         <h3 style="text-align:center">Setiap Langkah Kecil Membawa Perubahan</h3>
         <div class="container mt-4">
             <div>

@@ -34,7 +34,7 @@
         </form>
 
 
-        <a class="nav-link" href="{{route('akun')}}">
+        <a class="nav-link" href="{{route('profile')}}">
             <img src="{{ asset('img/profile.png') }}" alt="Profile" class="profile-logo me-2" style="height: 35px;">
         </a>
 
