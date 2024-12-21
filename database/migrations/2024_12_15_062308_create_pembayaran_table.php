@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('pembayaran', function (Blueprint $table) {
             $table->id();
+            $table->string('order_id')->unique();
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('donasi_id')->constrained('donasi')->onDelete('cascade');
             $table->decimal('jumlah', 10, 2);
