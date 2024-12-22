@@ -32,33 +32,33 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item mx-3">
-                        <a class="nav-link active" aria-current="page" href="{{ route('donasi.kategori', 'disabilitas') }}">Disabilitas</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('donasi.kategori', 'disabilitas') }}">{{ __('message.judul_disabilitas') }}</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link active" aria-current="page" href="{{ route('donasi.kategori', 'bencana alam') }}">Bencana Alam</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('donasi.kategori', 'bencana alam') }}">{{ __('message.judul_bencanaalam') }}</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link active" aria-current="page" href="{{ route('donasi.kategori', 'panti asuhan') }}">Panti Asuhan</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('donasi.kategori', 'panti asuhan') }}">{{ __('message.judul_pantiasuhan') }}</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link active" aria-current="page" href="{{ route('aboutus') }}">Tentang Kami</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('aboutus') }}">{{ __('message.judul_tentangkami') }}</a>
                     </li>
                 </ul>
                 <form class="d-flex mx-3" role="search" action="{{route('search')}}" method="GET">
                     <input class="form-control me-2" type="search" name="search"placeholder="Search" aria-label="Search" required>
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <button class="btn btn-outline-danger" type="submit" style="background-color: #AF0000;">Search</button>
                 </form>
                 <ul class="navbar-nav ms-auto">
                     @guest
                         @if (Route::has('login'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('profile') }}">{{ __('Masuk') }}</a>
+                                <a class="nav-link" href="{{ route('profile') }}">{{ __('message.login') }}</a>
                             </li>
                         @endif
 
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Daftar') }}</a>
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('message.register') }}</a>
                             </li>
                         @endif
                         @else
