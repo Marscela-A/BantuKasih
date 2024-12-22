@@ -1,5 +1,5 @@
 @extends('layout.master')
-@section('title', 'Donasi')
+@section('title', '@lang('message.judul_article', ['judul' => $donasi->judul])')
 
 @section('konten')
 <div class="container">
@@ -8,11 +8,11 @@
             <img src="{{ asset('img/'.$donasi->foto) }}" class="img-fluid" alt="{{ $donasi->judul }}" style="width:550px;height:300px">
         </div>
         <div class="col-md-6">
-            <h1>{{ $donasi->judul }}</h1>
-            <p><strong>Kategori:</strong> {{ ucfirst($donasi->kategori) }}</p>
-            <p><strong>Deskripsi:</strong> {{ $donasi->deskripsi }}</p>
-            <p>Untuk membantu teman-teman kita yang sedang kesulitan ini, mari kita berdonasi</p>
-            <a href="{{ route('donasi.form', $donasi->id) }}" class="btn" style="background-color: #AF0000; color: white;">Donasi Sekarang</a>
+            <h1>@lang('message.judul_article', ['judul' => $donasi->judul])</h1>
+            <p><strong>Kategori:</strong> @lang('messages.donasi_kategori', ['kategori' => ucfirst($donasi->kategori)])</p>
+            <p><strong>Deskripsi:</strong> @lang('message.desc_article', ['deskripsi' =>  $donasi->deskripsi])</p>
+            <p>@lang('message.mini_text')</p>
+            <a href="#" class="btn" style="background-color: #AF0000; color: white;">@lang('message.btn_donasi')</a>>
         </div>
     </div>
 </div>

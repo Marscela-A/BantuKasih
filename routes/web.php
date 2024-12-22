@@ -25,3 +25,11 @@ Route::get('/search', [SearchController::class, 'index'])->name('search');
 Auth::routes();
 Route::get('/profile', [App\Http\Controllers\HomeController::class, 'index'])->name('profile');
 Route::get('/logout', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
+Route::get('/set-locale/{locale}', function ($locale) {
+    // if (in_array($locale, ['en', 'id'])){
+    //     setcookie('locale',$locale);
+    // }
+    setcookie('locale', $locale, 60 * 24 * 30); // Simpan locale dalam cookie
+      
+    return redirect()->back();
+})->name('setLocale');

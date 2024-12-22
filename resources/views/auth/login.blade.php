@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', __('message.login'))
 
 @section('content')
 <div class="container" style="padding-top:70px">

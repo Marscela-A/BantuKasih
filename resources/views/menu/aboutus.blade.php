@@ -1,5 +1,5 @@
 @extends('layout.master')
-@section('title', 'Tentang Kami')
+@section('title', __('message.judul_tentangkami'))
 
 @section('konten')
 
