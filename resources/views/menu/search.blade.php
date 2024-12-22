@@ -1,11 +1,11 @@
 @extends('layout.master')
-@section('title','Hasil Penelusuran')
+@section('title', __('message.search'))
 @section('konten')
 <div class="col-12">
     <div class="container mt-4">
-        <h3>Hasil Pencarian untuk: "{{ $searchTerm }}"</h3>
+        <h3>@lang('message.hasil_search') "{{ $searchTerm }}"</h3>
         @if($articles->isEmpty())
-            <p>Tidak ada hasil yang ditemukan.</p>
+            <p>@lang('message.no_search')</p>
         @else
             <ul>
                 @foreach($articles as $article)
@@ -16,9 +16,9 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                <h5 class="card-title">{{ $article->judul }}</h5>
-                                <p class="card-text">{{ Str::limit($article->deskripsi, 150) }}</p>
-                                <a href="{{ route('donasi.show', $article->id) }}" class="btn" style="background-color: #AF0000; color: white;">Detail</a>
+                                <h5 class="card-title">@lang('message.judul_article', ['judul' => $article->judul])</h5>
+                                <p class="card-text">@lang('message.desc_article', ['deskripsi' => Str::limit($article->deskripsi, 150)])</p>
+                                <a href="{{ route('donasi.show', $article->id) }}" class="btn" style="background-color: #AF0000; color: white;">@lang('message.btn_detail')</a>
                                 </div>
                             </div>
                         </div>

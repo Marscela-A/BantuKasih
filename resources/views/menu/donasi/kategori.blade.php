@@ -1,9 +1,9 @@
 @extends('layout.master')
-@section('title', 'Donasi')
+@section('title', __('message.btn_donasi'))
 
 @section('konten')
 <div class="container">
-    <h4 class="my-4">Donasi {{ ucfirst($kategori) }}</h4>
+    <h4 class="my-4">@lang('message.kategori', ['kategori' => ucfirst($kategori)])</h4>
     <div class="row">
         @foreach ($donasi as $item)
         <div class="col-md-12 mb-3">
@@ -14,9 +14,9 @@
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title">{{ $item->judul }}</h5>
-                            <p class="card-text">{{ Str::limit($item->deskripsi, 150) }}</p>
-                            <a href="{{ route('donasi.show', $item->id) }}" class="btn" style="background-color: #AF0000; color: white;">Detail</a>
+                            <h5 class="card-title">@lang('message.judul_article', ['judul' => $item->judul])</h5>
+                            <p class="card-text">@lang('message.desc_article', ['deskripsi' => Str::limit($item->deskripsi, 150)])</p>
+                            <a href="{{ route('donasi.show', $item->id) }}" class="btn" style="background-color: #AF0000; color: white;">@lang('message.btn_detail')</a>
                         </div>
                     </div>
                 </div>

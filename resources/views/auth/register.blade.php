@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title', __('message.register'))
 @section('content')
 <div class="container"  style="padding-top:70px;">
     <div class="row justify-content-center">
