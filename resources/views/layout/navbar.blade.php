@@ -30,7 +30,7 @@
 
         <form class="d-flex mx-3" role="search" action="{{route('search')}}" method="GET">
             <input class="form-control me-2" type="search" name="search"placeholder="Search" aria-label="Search" required>
-            <button class="btn btn-outline-danger" type="submit" style="background-color: #AF0000;">Search</button>
+            <button class="btn btn-outline-danger" type="submit" style="background-color: #AF0000;color:white;">Search</button>
         </form>
 
 
