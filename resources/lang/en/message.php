@@ -5,6 +5,7 @@ return[
     'english' => 'English',
     'login'=>'Login',
     'register'=>'Register',
+    'konfirmasi'=>'Confirmation',
     'forgot_pass'=>'Forgot Password',
     'home'=>'Homepage',
     'search'=>'Search result',

@@ -5,6 +5,7 @@ return[
     'english' => 'Inggris',
     'login'=>'Masuk',
     'register'=>'Daftar',
+    'konfirmasi'=>'Konfirmasi',
     'forgot_pass'=>'Lupa Password',
     'home'=>'Halaman Utama',
     'search'=>'Hasil Penelusuran',

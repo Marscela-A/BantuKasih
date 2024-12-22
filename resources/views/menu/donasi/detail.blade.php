@@ -1,5 +1,5 @@
 @extends('layout.master')
-@section('title', '@lang('message.judul_article', ['judul' => $donasi->judul])')
+@section('title', __('message.judul_article', ['judul' => $donasi->judul]))
 
 @section('konten')
 <div class="container">
