@@ -12,7 +12,7 @@
             <p><strong>Kategori:</strong> @lang('message.kategori', ['kategori' => ucfirst($donasi->kategori)])</p>
             <p><strong>Deskripsi:</strong> @lang('message.desc_article', ['deskripsi' =>  $donasi->deskripsi])</p>
             <p>@lang('message.mini_text')</p>
-            <a href="#" class="btn" style="background-color: #AF0000; color: white;">@lang('message.btn_donasi')</a>>
+            <a href="{{ route('donasi.form', $donasi->id) }}" class="btn" style="background-color: #AF0000; color: white;">@lang('message.btn_donasi')</a>>
         </div>
     </div>
 </div>
