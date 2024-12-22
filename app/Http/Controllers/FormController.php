@@ -9,6 +9,6 @@ class FormController extends Controller
     //
     public function showForm($donasiId)
     {
-        return view('donasi.form', compact('donasiId'));
+        return view('menu.donasi.form', compact('donasiId'));
     }
 }
