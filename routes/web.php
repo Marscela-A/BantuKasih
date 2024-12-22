@@ -14,7 +14,12 @@ Route::prefix('/donasi')->group(function(){
     Route::get('/{kategori}', [DonasiController::class, 'kategori'])->name('donasi.kategori');
     Route::get('/detail/{id}', [DonasiController::class, 'show'])->name('donasi.show');
 });
-Route::get('/form/{id}', [FormController::class, 'showForm'])->name('donasi.form');
+Route::get('/form/{id}', [FormController::class, 'showForm'])->name('donasi.form'); 
+
+Route::get('/donasi/form', [DonationController::class, 'form'])->name('menu.donasi.form');
+Route::post('/donasi', [DonationController::class, 'store'])->name('donasi.store');
+Route::get('/donasi/pembayaran', [DonationController::class, 'pembayaran'])->name('menu.donasi.pembayaran');
+
 Route::resource('/akun', AkunController::class);
 
 Route::get('/aboutus', function (){
