@@ -28,7 +28,7 @@
                         <div class="card">
                             <div class="card-body">
                                 @if($user->profile && $user->profile->photo)
-                                    <img src="{{ asset('storage/photos/'.$user->profile->photo) }}" class="img-thumbnail rounded mx-auto d-block">
+                                    <img src="{{ $profilePhoto}}" class="img-thumbnail rounded mx-auto d-block">
                                 @else
                                     <img src="{{ asset('img/profile.png') }}" class="img-thumbnail rounded mx-auto d-block">
                                 @endif
@@ -55,9 +55,11 @@
                             <div class="card-body">
                                 <p><strong>Nama:</strong> {{ $user->name }}</p>
                                 <p><strong>Email:</strong> {{ $user->email }}</p>
-                                <a href="{{route('profile_create')}}" class="btn btn-success">@lang('crud.btn_tambah')</a>
+                                <p><strong>No Telp:</strong> {{ $user->profile->phone_number }}</p>
+                                <p><strong>Alamat:</strong> {{ $user-profile->address }}</p>
+                                <p><strong>Jenis Kelamin:</strong> {{ $user->profile->sex }}</p>
                                 <a href="{{route('profile_edit', $user->id)}}" class="btn btn-warning">@lang('crud.btn_ubah')</a>
-                                <div class="col-md-12" style="padding-top:240px; padding-left:240px">
+                                <div class="col-md-12" style="padding-top:70px">
                                     <form action="#" method="POST" style="display:inline;">
                                         @csrf
                                         @method('DELETE')

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\pembayaran;
 
 class PembayaranController extends Controller
 {
@@ -11,7 +12,7 @@ class PembayaranController extends Controller
     {
         $data = $request->all();
 
-        $transaction = Transaction::create([
+        $transaction = Pembayaran::create([
             'user_id' => Auth::user()->id,
             'product_id' => $data['product_id'],
             'price' => $data['price'],
@@ -42,7 +43,7 @@ class PembayaranController extends Controller
         $transaction->snap_token = snapToken; 
         $transaction->save(); 
 
-        return redirect()->route('menu.donasi.pembayaran', $transaction->id);
+        return redirect()->route('donasi_form_store', $transaction->id);
     }
 
     public function pembayaran(Transaction $transaction)

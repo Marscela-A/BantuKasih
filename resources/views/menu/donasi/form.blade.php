@@ -3,7 +3,7 @@
 
 @section('konten')
     <h2 class="title">Formulir Pendaftaran Donasi</h2>
-    <form action="{{ route('donasi.form', $donasiId) }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('donasi_form', $donasiId) }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <label for="nama">Nama (Bpk/Ibu/Anonymous):</label>
@@ -45,7 +45,7 @@
             <input type="file" id="foto" name="foto">
             @error('foto') <div class="error">{{ $message }}</div> @enderror
         </div> 
-        <a href="#" class="btn" style="background-color: #AF0000; color: white;">Pembayaran</a>>
+        <a href="{{route('donasi_payment', $donasiId)}}" class="btn" style="background-color: #AF0000; color: white;">Pembayaran</a>
     </form>
     <div class="footer-space"></div>
 
