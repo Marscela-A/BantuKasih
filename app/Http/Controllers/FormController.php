@@ -32,12 +32,12 @@ class FormController extends Controller
 
         Form::create($validatedData);
         
-        return redirect()->route('donasi.pembayaran');
+        return redirect()->route('donasi_payment');
     } 
 
-    public function payment()
-    {
-        return view('menu.donasi.pembayaran');
-    }
+    // public function payment()
+    // {
+    //     return view('menu.donasi.pembayaran');
+    // }
 
 }
