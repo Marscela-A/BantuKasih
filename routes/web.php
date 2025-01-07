@@ -9,6 +9,7 @@ use App\Http\Controllers\AkunController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\PembayaranController;
+use App\Http\Controllers\setlocalecontroller;
 
 Route::get('/', function(){
     return view('menu.home');
@@ -44,12 +45,4 @@ Route::post('/profiles', [App\Http\Controllers\HomeController::class, 'store'])-
 //edit->get.head->akun{akun}/edit, index->get.head, store->post, create->get.head->akun/create, show->get.head->akun{akun}
 //update->put.patch->akunn{akun}, destroy->delete->akun{akun}
 Route::get('/logout', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
-Route::get('/set-locale/{locale}', function ($locale) {
-    if (in_array($locale, ['en', 'id'])) {
-        //Session::put('applocale', $locale);
-        session(['locale' => $locale]);
-        dd(session('locale'));
-    }
-    return redirect()->back();
-})->name('set-locale');
-
+Route::get('/set-locale/{locale}', [setlocalecontroller::class, 'setLocale'])->name('set-locale');

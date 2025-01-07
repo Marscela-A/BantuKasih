@@ -18,11 +18,8 @@ class setLocale
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // \Log::info('Middleware setLocale dipanggil');
-        // dd("Tes setLocale");
-        $locale = session('locale', config('app.locale'));
-        //$locale = $request->session()->get('locale', config('app.locale'));
-        
+        $locale = Session::get('locale')??'id';
+        Session::put('locale', $locale);
         App::setLocale($locale);
         return $next($request);
     }

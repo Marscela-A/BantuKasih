@@ -39,8 +39,8 @@
         </a>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li>
-                <a class="btn btn-light" href="{{ route('set-locale','en') }}">ENG</a>
-                <a class="btn btn-light" href="{{ route('set-locale','id') }}">ID</a>
+                <a class="btn btn-light" href="set-locale/en">ENG</a>
+                <a class="btn btn-light" href="set-locale/id">ID</a>
             </li>
         </ul>
 

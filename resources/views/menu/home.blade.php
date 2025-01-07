@@ -5,7 +5,7 @@
 <div>
     <div class="col-12">
         <img src="{{asset('img/banner.jpg')}}" alt="Banner" style= "width:100%;height:80vh;padding-bottom:20px">
-        <h1 style="text-align:center">{{__('crud.slogan')}}</h1>
+        <h1 style="text-align:center">@lang('crud.slogan')</h1>
         @if (session('success'))
             <div class="alert alert-danger" role="alert">
                 {{ session('success') }}
