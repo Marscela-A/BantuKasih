@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 use App\Http\Controllers\DonasiController;
 use App\Http\Controllers\AkunController;
@@ -44,8 +45,11 @@ Route::post('/profiles', [App\Http\Controllers\HomeController::class, 'store'])-
 //update->put.patch->akunn{akun}, destroy->delete->akun{akun}
 Route::get('/logout', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
 Route::get('/set-locale/{locale}', function ($locale) {
-    setcookie('locale', $locale, 60 * 24 * 30); // Simpan locale dalam cookie
+    if (in_array($locale, ['en', 'id'])) {
+        //Session::put('applocale', $locale);
+        session(['locale' => $locale]);
+        dd(session('locale'));
+    }
     return redirect()->back();
-})->name('setLocale');
-
+})->name('set-locale');
 

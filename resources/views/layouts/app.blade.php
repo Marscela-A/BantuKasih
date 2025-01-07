@@ -48,6 +48,12 @@
                     <input class="form-control me-2" type="search" name="search"placeholder="Search" aria-label="Search" required>
                     <button class="btn btn-outline-danger" type="submit" style="background-color: #AF0000;color:white;">Search</button>
                 </form>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li>
+                        <a class="btn btn-primary" href="{{ route('set-locale', 'en') }}">En</a> |
+                        <a class="btn btn-primary" href="{{ route('set-locale', 'id') }}">Id</a>
+                    </li>
+                </ul>
                 <ul class="navbar-nav ms-auto">
                     @guest
                         @if (Route::has('login'))
