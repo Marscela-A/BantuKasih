@@ -5,8 +5,11 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Log;
 
-class SetLocale
+class setLocale
 {
     /**
      * Handle an incoming request.
@@ -15,8 +18,9 @@ class SetLocale
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $locale = $request->cookie('locale') ?: config('app.locale');
-        app()->setLocale($locale);
+        $locale = Session::get('locale')??'id';
+        Session::put('locale', $locale);
+        App::setLocale($locale);
         return $next($request);
     }
 }

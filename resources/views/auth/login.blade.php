@@ -1,12 +1,12 @@
 @extends('layouts.app')
-@section('title', __('message.login'))
+@section('title', __('crud.login'))
 
 @section('content')
 <div class="container" style="padding-top:70px">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header" style="background-color:#AF0000;color:white; text-align:center">{{ __('Masuk') }}</div>
+                <div class="card-header" style="background-color:#AF0000;color:white; text-align:center">@lang('crud.login')</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">

@@ -15,16 +15,16 @@
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
             <li class="nav-item mx-3">
-                <a class="nav-link active" aria-current="page" href="{{route('donasi.kategori', 'disabilitas')}}">{{ __('message.judul_disabilitas') }}</a>
+                <a class="nav-link active" aria-current="page" href="{{route('donasi.kategori', 'disabilitas')}}">{{__('crud.judul_disabilitas')}}</a>
             </li>
             <li class="nav-item mx-3">
-                <a class="nav-link active" aria-current="page" href="{{route('donasi.kategori', 'bencana alam')}}">{{ __('message.judul_bencanaalam') }}</a>
+                <a class="nav-link active" aria-current="page" href="{{route('donasi.kategori', 'bencana alam')}}">{{__('crud.judul_bencanaalam')}}</a>
             </li>
             <li class="nav-item mx-3">
-                <a class="nav-link active" aria-current="page" href="{{route('donasi.kategori', 'panti asuhan')}}">{{ __('message.judul_pantiasuhan') }}</a>
+                <a class="nav-link active" aria-current="page" href="{{route('donasi.kategori', 'panti asuhan')}}">{{__('crud.judul_pantiasuhan')}}</a>
             </li>
             <li class="nav-item mx-3">
-                <a class="nav-link active" aria-current="page" href="{{route('aboutus')}}">{{ __('message.judul_tentangkami') }}</a>
+                <a class="nav-link active" aria-current="page" href="{{route('aboutus')}}">{{__('crud.judul_tentangkami')}}</a>
             </li>
         </ul>
 
@@ -38,14 +38,9 @@
             <img src="{{ asset('img/profile.png') }}" alt="Profile" class="profile-logo me-2" style="height: 35px;">
         </a>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    {{__('message.language') }}
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="{{ route('setLocale', 'id') }}">{{ __('message.indonesia') }}</a></li>
-                    <li><a class="dropdown-item" href="{{ route('setLocale', 'en') }}">{{ __('message.english') }}</a></li>
-                </ul>
+            <li>
+                <a class="btn btn-light" href="set-locale/en">ENG</a>
+                <a class="btn btn-light" href="set-locale/id">ID</a>
             </li>
         </ul>
 

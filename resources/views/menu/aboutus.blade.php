@@ -1,5 +1,5 @@
 @extends('layout.master')
-@section('title', __('message.judul_tentangkami'))
+@section('title', __('crud.judul_tentangkami'))
 
 @section('konten')
 
