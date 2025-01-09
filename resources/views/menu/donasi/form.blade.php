@@ -3,8 +3,9 @@
 
 @section('konten')
     <h2 class="title">Formulir Pendaftaran Donasi</h2>
-    <form action="{{ route('donasi_form', $donasiId) }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('donasi_form_store') }}" method="POST" enctype="multipart/form-data">
         @csrf
+        <input type="hidden" name="donasi_id" value="{{ $donasiId }}">
         <div class="form-group">
             <label for="nama">Nama (Bpk/Ibu/Anonymous):</label>
             <input type="text" id="nama" name="nama" required>
@@ -36,16 +37,12 @@
             @error('ktp') <div class="error">{{ $message }}</div> @enderror
         </div>
         <div class="form-group">
-            <label for="metode_pembayaran">Metode Pembayaran:</label>
-            <input type="text" id="metode_pembayaran" name="metode_pembayaran" required>
-            @error('metode_pembayaran') <div class="error">{{ $message }}</div> @enderror
-        </div>
-        <div class="form-group">
             <label for="foto">Foto diri (optional):</label>
             <input type="file" id="foto" name="foto">
             @error('foto') <div class="error">{{ $message }}</div> @enderror
         </div> 
-        <a href="{{route('donasi_payment', $donasiId)}}" class="btn" style="background-color: #AF0000; color: white;">Pembayaran</a>
+        <button type="submit" class="btn btn-primary">Bayar Sekarang</button>
+        <!-- <a href="{{route('donasi_payment', $donasiId)}}" class="btn" style="background-color: #AF0000; color: white;">Pembayaran</a> -->
     </form>
     <div class="footer-space"></div>
 

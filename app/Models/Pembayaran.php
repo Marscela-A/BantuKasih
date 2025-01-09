@@ -10,7 +10,7 @@ class Pembayaran extends Model
     use HasFactory;
 
     protected $fillable = [
-        'order_id', 'user_id', 'donasi_id', 'jumlah', 'status',
+        'amount', 'status', 'snap_token',
     ];
 
     public function user()
