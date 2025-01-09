@@ -32,16 +32,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item mx-3">
-                        <a class="nav-link active" aria-current="page" href="{{ route('donasi.kategori', 'disabilitas') }}">{{ __('message.judul_disabilitas') }}</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('donasi.kategori', 'disabilitas') }}">{{ __('crud.judul_disabilitas') }}</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link active" aria-current="page" href="{{ route('donasi.kategori', 'bencana alam') }}">{{ __('message.judul_bencanaalam') }}</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('donasi.kategori', 'bencana alam') }}">{{ __('crud.judul_bencanaalam') }}</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link active" aria-current="page" href="{{ route('donasi.kategori', 'panti asuhan') }}">{{ __('message.judul_pantiasuhan') }}</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('donasi.kategori', 'panti asuhan') }}">{{ __('crud.judul_pantiasuhan') }}</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link active" aria-current="page" href="{{ route('aboutus') }}">{{ __('message.judul_tentangkami') }}</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('aboutus') }}">{{ __('crud.judul_tentangkami') }}</a>
                     </li>
                 </ul>
                 <form class="d-flex mx-3" role="search" action="{{route('search')}}" method="GET">
@@ -50,21 +50,21 @@
                 </form>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li>
-                        <a class="btn btn-primary" href="{{ route('set-locale', 'en') }}">En</a> |
-                        <a class="btn btn-primary" href="{{ route('set-locale', 'id') }}">Id</a>
+                        <a class="btn btn-light" href="set-locale/en">ENG</a>
+                        <a class="btn btn-light" href="set-locale/id">ID</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto">
                     @guest
                         @if (Route::has('login'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('profile') }}">{{ __('message.login') }}</a>
+                                <a class="nav-link" href="{{ route('profile') }}">{{ __('crud.login') }}</a>
                             </li>
                         @endif
 
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('message.register') }}</a>
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('crud.register') }}</a>
                             </li>
                         @endif
                         @else

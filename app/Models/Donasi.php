@@ -15,8 +15,8 @@ class Donasi extends Model
         'judul', 'kategori', 'deskripsi', 'foto',
     ];
 
-    public function pembayaran()
+    public function form()
     {
-        return $this->hasMany(Pembayaran::class);
+        return $this->hasMany(Form::class);
     }
 }

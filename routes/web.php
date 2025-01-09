@@ -20,10 +20,10 @@ Route::prefix('/donasi')->group(function(){
 });
 Route::get('/form/{id}', [FormController::class, 'showForm'])->name('donasi_form'); 
 Route::post('/donasi', [FormController::class, 'store'])->name('donasi_form_store');
-// Route::get('/donasi/pembayaran', [FormController::class, 'payment'])->name('donasi.form.pembayaran');
 
-Route::get('/pembayaran/{id}', [PembayaranController::class, 'process'])->name('donasi_payment');
-Route::get('/pembayaran/continue/{transaction}', [PembayaranController::class, 'pembayaran'])->name('donasi_transaksi');
+Route::get('/pembayaran/{id}', [PembayaranController::class, 'checkout'])->name('donasi_payment');
+Route::post('/midtrans/callback', [PembayaranController::class, 'callback'])->name('midtrans.callback');
+Route::get('/midtrans/sukses', [PembayaranController::class, 'success'])->name('sukses');
 
 
 Route::resource('/akun', AkunController::class);
