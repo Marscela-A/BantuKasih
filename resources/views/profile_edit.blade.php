@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <h1 class="title" style="text-align:center;">@lang('crud.btn_ubah')</h1>
             <div class="card", style="justify-content-center; padding-top:20px;">
-                <form action="{{ route('profile_updates', $user->id) }}" method="POST">
+                <form action="{{ route('profile_update', $user->id) }}" method="POST">
                     @csrf
                     @method('PUT')
                     <div class="row mb-3">
@@ -64,11 +64,4 @@
         </div>
     </div>
 </div>
-<style>
-    .button {
-        text-align: center; 
-        padding-left: 100px;
-        padding-right: 100px;
-    }
-</style>
 @endsection
