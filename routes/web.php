@@ -23,7 +23,7 @@ Route::post('/donasi', [FormController::class, 'store'])->name('donasi_form_stor
 
 Route::get('/pembayaran/{id}', [PembayaranController::class, 'checkout'])->name('donasi_payment');
 Route::post('/midtrans/callback', [PembayaranController::class, 'callback'])->name('midtrans.callback');
-Route::get('/midtrans/sukses', [PembayaranController::class, 'success'])->name('sukses');
+Route::get('/midtrans/sukses/{pembayaran}', [PembayaranController::class, 'success'])->name('sukses');
 
 
 Route::resource('/akun', AkunController::class);

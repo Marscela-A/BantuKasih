@@ -19,6 +19,9 @@ return new class extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->enum('role', ['admin', 'user'])->default('user');
+            $table->enum('gender', ['male', 'female']);
+            $table->string('address');
+            $table->string('mobile_number');
             $table->timestamps();
         });
 
