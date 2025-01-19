@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', __('message.register'))
+@section('title', __('crud.register'))
 @section('content')
 <div class="container"  style="padding-top:70px;">
     <div class="row justify-content-center">
@@ -58,6 +58,52 @@
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="gender" class="col-md-4 col-form-label text-md-end">{{ __('crud.gender') }}</label>
+
+                            <div class="col-md-6">
+                                <select id="gender" class="form-control @error('gender') is-invalid @enderror" name="gender" required>
+                                    <option value="">{{ __('crud.select') }}</option>
+                                    <option value="male">{{ __('crud.male') }}</option>
+                                    <option value="female">{{ __('crud.female') }}</option>
+                                </select>
+
+                                @error('gender')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="mobile_number" class="col-md-4 col-form-label text-md-end">{{ __('crud.mobile_number') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="mobile_number" type="text" class="form-control @error('mobile_number') is-invalid @enderror" name="mobile_number" value="{{ old('mobile_number') }}" required autocomplete="mobile_number">
+
+                                @error('mobile_number')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="address" class="col-md-4 col-form-label text-md-end">{{ __('crud.address') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address">
+
+                                @error('address')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                         </div>
 

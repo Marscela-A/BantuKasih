@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', __('message.konfirmasi'))
+@section('title', __('crud.konfirmasi'))
 
 @section('content')
 <div class="container"  style="padding-top:70px">

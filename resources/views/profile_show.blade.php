@@ -53,11 +53,11 @@
                         </div>  
                         <div class="card">
                             <div class="card-body">
-                                <p><strong>Nama:</strong> {{ $user->name }}</p>
+                                <p><strong>{{__('crud.nama')}}:</strong> {{ $user->name }}</p>
                                 <p><strong>Email:</strong> {{ $user->email }}</p>
-                                <p><strong>No Telp:</strong> {{ $user->profile->phone_number }}</p>
-                                <p><strong>Alamat:</strong> {{ $user-profile->address }}</p>
-                                <p><strong>Jenis Kelamin:</strong> {{ $user->profile->sex }}</p>
+                                <p><strong>{{__('crud.gender')}}:</strong> {{ $user->gender }}</p>
+                                <p><strong>{{__('crud.mobile_number')}}:</strong> {{ $user->mobile_number }}</p>
+                                <p><strong>{{__('crud.address')}}:</strong> {{ $user->address }}</p>
                                 <a href="{{route('profile_edit', $user->id)}}" class="btn btn-warning">@lang('crud.btn_ubah')</a>
                                 <div class="col-md-12" style="padding-top:70px">
                                     <form action="#" method="POST" style="display:inline;">

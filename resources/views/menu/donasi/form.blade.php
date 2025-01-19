@@ -41,7 +41,7 @@
             <input type="file" id="foto" name="foto">
             @error('foto') <div class="error">{{ $message }}</div> @enderror
         </div> 
-        <button type="submit" class="btn btn-primary">Bayar Sekarang</button>
+        <button type="submit" class="btn btn-danger" style="background-color: #AF0000; color: white;">Bayar Sekarang</button>
         <!-- <a href="{{route('donasi_payment', $donasiId)}}" class="btn" style="background-color: #AF0000; color: white;">Pembayaran</a> -->
     </form>
     <div class="footer-space"></div>

@@ -19,6 +19,16 @@ class PembayaranController extends Controller
         return view('menu.donasi.checkout', compact('form', 'snapToken', 'donasi'));
     }
 
+    public function success($id)
+    {
+        $form = Form::findOrFail($id);
+        $donasi = Donasi::findOrFail($form->donasi_id);
+        $form->status='sukses';
+        $form->save();
+
+        return view('menu.donasi.success', compact('form', 'donasi'));
+    }
+
     public function callback(Request $request)
     {
         $notif = new Midtrans\Notification();
@@ -47,4 +57,5 @@ class PembayaranController extends Controller
 
         return $notif->reply();
     }
+
 }

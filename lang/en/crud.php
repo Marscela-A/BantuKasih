@@ -1,16 +1,19 @@
 <?php
 
 return [
+    'select'=>'Select',
+    'gender'=>'Gender',
+    'female'=>'Female',
+    'male'=>'Male',
     'btn_tambah' => 'Add Biodata',
     'btn_ubah' => 'Edit',
     'btn_hapus' => 'Delete',
     'btn_simpan' => 'Save',
     'btn_perbarui' => 'Update',
     'btn_tampil' => 'Show',
-    'phone_number'=>'Phone Number',
+    'nama'=>'Name',
+    'mobile_number'=>'Phone Number',
     'address'=>'Address',
-    'sex'=>'Sex',
-    'sexx'=>': sexx',
     'language' => 'Language',
     'indonesia' => 'Indonesia',
     'english' => 'English',
