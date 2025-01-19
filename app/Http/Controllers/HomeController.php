@@ -95,56 +95,31 @@ class HomeController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
         $request->validate([
             'name' => 'required|string|max:255', // Hanya untuk validasi, tidak diupdate
             'email' => 'required|string|email|unique:users,email,' . $user->id, // Hanya untuk validasi, tidak diupdate
-            'photo' => 'nullable|image|mimes:jpeg,png,jpg|max:2048', 
-        ]);
-
-        // Cek apakah pengguna memiliki profil
-        if (!$user->profile) {
-            $user->profile()->create(); // Buat profil baru jika belum ada
-        }
-
-        $profile = $user->profile;
-
-        // Update foto profil jika ada
-        if ($request->hasFile('photo')) {
-            // Hapus foto profil lama jika ada
-            if ($user->profile && $user->profile->photo) {
-                Storage::disk('public')->delete('photos/' . $user->profile->photo); // Pastikan menggunakan disk yang benar
-            }
-        
-            // Simpan foto baru
-            $path = $request->file('photo')->store('photos', 'public');
-            $user->profile->photo = $path;
-            $user->profile->save();
-        }
-
-        return redirect()->route('profile')->with('success', 'Profil berhasil diperbarui!');
-    }
-    public function updatedata(Request $request, User $user)
-    {
-        //
-        $validator->validate($request->all(), [
-            'name' => 'required|string|max:255', // Hanya untuk validasi, tidak diupdate
-            'email' => 'required|string|email|unique:users,email,' . $user->id, // Hanya untuk validasi, tidak diupdate
-            'phone_number' => 'required|string',
+            'photo' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+            'mobile_number' => 'required|string',
             'address' => 'required|string',
-            'sex' => 'required|in:pria,perempuan,none',
+            'gender' => 'required|in:male,female,none',
         ]);
 
-        if ($validator->fails()) {
-            return back()->withErrors($validator)->withInput();
-        }
-
-        // Update only the specified fields
+        // Update user profile data
         $user->update([
-            'phone_number' => $request->phone_number,
+            'mobile_number' => $request->mobile_number,
             'address' => $request->address,
-            'sex' => $request->sex,
+            'gender' => $request->gender,
         ]);
+
+        // Handle photo upload
+        if ($request->hasFile('photo')) {
+            if ($user->profile && $user->profile->photo) {
+                Storage::disk('public')->delete('photos/' . $user->profile->photo); 
+            }
+
+            $path = $request->file('photo')->store('photos', 'public');
+            $user->profile->update(['photo' => $path]);
+        }
 
         return redirect()->route('profile')->with('success', 'Profil berhasil diperbarui!');
     }

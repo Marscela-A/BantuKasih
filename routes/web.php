@@ -37,8 +37,7 @@ Auth::routes();
 Route::get('/profile', [App\Http\Controllers\HomeController::class, 'index'])->name('profile');
 Route::get('/profile/create', [App\Http\Controllers\HomeController::class, 'create'])->name('profile_create');
 Route::get('/{profile}/edit', [App\Http\Controllers\HomeController::class, 'edit'])->name('profile_edit');
-Route::patch('/{profile}', [App\Http\Controllers\HomeController::class, 'update'])->name('profile_update');
-Route::patch('/{profiles}', [App\Http\Controllers\HomeController::class, 'updatedata'])->name('profile_updates');
+Route::put('/{profile}', [App\Http\Controllers\HomeController::class, 'update'])->name('profile_update');
 Route::get('/{profile}', [App\Http\Controllers\HomeController::class, 'show'])->name('profile_show');
 Route::post('/profiles', [App\Http\Controllers\HomeController::class, 'store'])->name('profile_store');
 
